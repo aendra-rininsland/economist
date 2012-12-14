@@ -11,7 +11,7 @@ As an attempt to:
 
 Let me know what you think!
 
--Ændrew Rininsland <aendrew [at] aendrew dot com>
+-Ændrew Rininsland (aendrew [at] aendrew dot com)
 Data nerd and occasional contributor to the Guardian and Economist 
 
 
