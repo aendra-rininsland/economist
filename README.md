@@ -1,6 +1,6 @@
 Economist Visualizations by Ændrew Rininsland
 =============================================
-
+a
 As an attempt to:
 
 a. Cut down on AWS hosting costs 
