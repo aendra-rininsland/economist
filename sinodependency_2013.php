@@ -274,27 +274,27 @@ a {
 <div id="type-list">
 	<table>
 	    <tr>
-          <td style="text-align: center; width: 16%;">
+<!--          <td style="text-align: center; width: 16%;">
               <input type="radio" id="2013" name="viz-year" checked="checked" value="left" />
             <label for="2013">2013</label>
-          </td>
-          <td style="text-align: center; width: 16%;">
-              <input type="radio" id="2012" name="viz-year" value="left" />
+    </td>-->
+          <td style="text-align: center; width: 20%;">
+              <input type="radio" id="2012" name="viz-year" checked="checked" value="left" />
             <label for="2012">2012</label>
           </td>
-	        <td style="text-align: center; width: 16%;">
+	        <td style="text-align: center; width: 20%;">
 	            <input type="radio" id="2011" name="viz-year" value="left" />
 	        	<label for="2011">2011</label>
 	        </td>
-	        <td style="text-align: center; width: 16%;">
+	        <td style="text-align: center; width: 20%;">
 	            <input type="radio" id="2010" name="viz-year" value="left" />
 	        	<label for="2010">2010</label>
 	        </td>
-	        <td style="text-align: center; width: 16%;">
+	        <td style="text-align: center; width: 20%;">
 	            <input type="radio" id="2009" name="viz-year" value="left" />
 	        	<label for="2009">2009</label>
 	        </td>
-	        <td style="text-align: center; width: 16%;">
+	        <td style="text-align: center; width: 20%;">
 	            <input type="checkbox" id="group_by_sector" name="group_by_sector" value="left" />
 	        	<label for="group_by_sector">Group by sector</label>
 	        </td>

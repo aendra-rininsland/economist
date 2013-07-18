@@ -35,7 +35,7 @@ var Log = {
 
 function init(){
 
-var json2013 = (function () {
+/*var json2013 = (function () {
     var json = null;
     $.ajax({
         'async': false,
@@ -50,14 +50,14 @@ var json2013 = (function () {
   //console.dir(json);
     return json;
 })();
-
+*/
 
 var json = (function () {
     var json = null;
     $.ajax({
         'async': false,
         'global': false,
-        'url': 'fetch_sinoindex_json.php?year=2012',
+        'url': 'fetch_sinoindex_json_2013.php?year=2012',
         'dataType': "json",
         'success': function (data) {
             json = data;
@@ -69,12 +69,12 @@ var json = (function () {
 })();
 
 
-var json2 = (function () {
+/*var json2 = (function () {
     var json = null;
     $.ajax({
         'async': false,
         'global': false,
-        'url': 'fetch_sinoindex_json.php?year=2010',
+        'url': 'fetch_sinoindex_json_2013.php?year=2010',
         'dataType': "json",
         'success': function (data) {
             json = data;
@@ -89,7 +89,7 @@ var json3 = (function () {
     $.ajax({
         'async': false,
         'global': false,
-        'url': 'fetch_sinoindex_json.php?year=2009',
+        'url': 'fetch_sinoindex_json_2013.php?year=2009',
         'dataType': "json",
         'success': function (data) {
             json = data;
@@ -97,7 +97,7 @@ var json3 = (function () {
     });
 	//console.dir(json);
     return json;
-})();
+})();*/
 
   var tm = new $jit.TM.Squarified({
     //where to inject the visualization
@@ -152,9 +152,9 @@ var json3 = (function () {
 	        var data = node.data;
 	        var weight;
 	        var year = data.year;
-	        if (data.year === "2013") {
+	        /*if (data.year === "2013") {
 	          weight = data.Weight2013;
-	        } else if (data.year === "2012") {
+	        } else*/ if (data.year === "2012") {
 	        	weight = data.Weight2012;
           } else if (data.year === "2011") {
             weight = data.Weight2011;
@@ -232,7 +232,7 @@ var json3 = (function () {
         }
     }*/
   });
-  tm.loadJSON(json2013);
+  tm.loadJSON(json);
   tm.refresh();
   //end
   //add events to radio buttons
@@ -273,7 +273,7 @@ var json3 = (function () {
     tm.refresh();
   });
 
-  util.addEvent(viz2013, 'change', function() {
+  /*util.addEvent(viz2013, 'change', function() {
     if(!viz2013.checked) return;
   jQuery('.country-legend td').each(function(){
           var theCurrent = jQuery(this).children('a').attr('id');
@@ -315,7 +315,7 @@ var json3 = (function () {
   tm.loadJSON(json);
     tm.refresh();
 
-  });
+  });*/
 
   util.addEvent(viz2012, 'change', function() {
     if(!viz2012.checked) return;
@@ -357,6 +357,50 @@ var json3 = (function () {
 		})();
 	}
 	tm.loadJSON(json);
+    tm.refresh();
+
+  });
+
+  util.addEvent(viz2011, 'change', function() {
+    if(!viz2011.checked) return;
+  jQuery('.country-legend td').each(function(){
+          var theCurrent = jQuery(this).children('a').attr('id');
+            jQuery(this).removeClass('disabled');
+        });
+  selected_cat = 'all';
+  selected_year = '2011';
+  tm.out(); tm.out(); tm.out(); tm.out();
+  currentParentDepth = 0;
+  if (group_by_sector.checked != true) {
+    var json = (function () {
+        var json = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': 'fetch_sinoindex_json_2013.php?year=2011',
+            'dataType': "json",
+            'success': function (data) {
+                json = data;
+            }
+        });
+        return json;
+    })();
+  } else {
+    var json = (function () {
+        var json = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': 'fetch_sinoindex_json_2013.php?year=2011&group_by_sector=TRUE',
+            'dataType': "json",
+            'success': function (data) {
+                json = data;
+            }
+        });
+        return json;
+    })();
+  }
+  tm.loadJSON(json);
     tm.refresh();
 
   });
