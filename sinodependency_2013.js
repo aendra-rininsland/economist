@@ -40,7 +40,7 @@ var json2013 = (function () {
     $.ajax({
         'async': false,
         'global': false,
-        'url': 'fetch_sinoindex_json.php?year=2013',
+        'url': 'fetch_sinoindex_json_2013.php?year=2013',
         'dataType': "json",
         'success': function (data) {
             json = data;
@@ -152,13 +152,12 @@ var json3 = (function () {
 	        var data = node.data;
 	        var weight;
 	        var year = data.year;
-	        console.dir(data);
 	        if (data.year === "2013") {
-	          year = '2012/13';
-	          weight = data.Weight2012_2013;
+	          weight = data.Weight2013;
 	        } else if (data.year === "2012") {
-	        	year = '2011/12';
-	        	weight = data.Weight2011_2012;
+	        	weight = data.Weight2012;
+          } else if (data.year === "2011") {
+            weight = data.Weight2011;
 	        } else if (data.year === "2010") {
 	        	weight = data.Weight2010;
 	        } else if (data.year === "2009") {
@@ -242,6 +241,7 @@ var json3 = (function () {
       sd = $jit.id('r-sd'),
       viz2013 = $jit.id('2013'),
       viz2012 = $jit.id('2012'),
+      viz2011 = $jit.id('2011'),
       viz2010 = $jit.id('2010'),
       viz2009 = $jit.id('2009'),
       group_by_sector = $jit.id('group_by_sector');
@@ -289,7 +289,7 @@ var json3 = (function () {
         $.ajax({
             'async': false,
             'global': false,
-            'url': 'fetch_sinoindex_json.php?year=2013',
+            'url': 'fetch_sinoindex_json_2013.php?year=2013',
             'dataType': "json",
             'success': function (data) {
                 json = data;
@@ -303,7 +303,7 @@ var json3 = (function () {
         $.ajax({
             'async': false,
             'global': false,
-            'url': 'fetch_sinoindex_json.php?year=2013&group_by_sector=TRUE',
+            'url': 'fetch_sinoindex_json_2013.php?year=2013&group_by_sector=TRUE',
             'dataType': "json",
             'success': function (data) {
                 json = data;
@@ -333,7 +333,7 @@ var json3 = (function () {
 		    $.ajax({
 		        'async': false,
 		        'global': false,
-		        'url': 'fetch_sinoindex_json.php?year=2012',
+		        'url': 'fetch_sinoindex_json_2013.php?year=2012',
 		        'dataType': "json",
 		        'success': function (data) {
 		            json = data;
@@ -347,7 +347,7 @@ var json3 = (function () {
 		    $.ajax({
 		        'async': false,
 		        'global': false,
-		        'url': 'fetch_sinoindex_json.php?year=2012&group_by_sector=TRUE',
+		        'url': 'fetch_sinoindex_json_2013.php?year=2012&group_by_sector=TRUE',
 		        'dataType': "json",
 		        'success': function (data) {
 		            json = data;
@@ -377,7 +377,7 @@ var json3 = (function () {
 		    $.ajax({
 		        'async': false,
 		        'global': false,
-		        'url': 'fetch_sinoindex_json.php?year=2010',
+		        'url': 'fetch_sinoindex_json_2013.php?year=2010',
 		        'dataType': "json",
 		        'success': function (data) {
 		            json = data;
@@ -391,7 +391,7 @@ var json3 = (function () {
 		    $.ajax({
 		        'async': false,
 		        'global': false,
-		        'url': 'fetch_sinoindex_json.php?year=2010&group_by_sector=TRUE',
+		        'url': 'fetch_sinoindex_json_2013.php?year=2010&group_by_sector=TRUE',
 		        'dataType': "json",
 		        'success': function (data) {
 		            json = data;
@@ -420,7 +420,7 @@ var json3 = (function () {
 		    $.ajax({
 		        'async': false,
 		        'global': false,
-		        'url': 'fetch_sinoindex_json.php?year=2009',
+		        'url': 'fetch_sinoindex_json_2013.php?year=2009',
 		        'dataType': "json",
 		        'success': function (data) {
 		            json = data;
@@ -434,7 +434,7 @@ var json3 = (function () {
 		    $.ajax({
 		        'async': false,
 		        'global': false,
-		        'url': 'fetch_sinoindex_json.php?year=2009&group_by_sector=TRUE',
+		        'url': 'fetch_sinoindex_json_2013.php?year=2009&group_by_sector=TRUE',
 		        'dataType': "json",
 		        'success': function (data) {
 		            json = data;
@@ -454,7 +454,7 @@ var json3 = (function () {
 				    $.ajax({
 				        'async': false,
 				        'global': false,
-				        'url': 'fetch_sinoindex_json.php?year=' + selected_year,
+				        'url': 'fetch_sinoindex_json_2013.php?year=' + selected_year,
 				        'dataType': "json",
 				        'success': function (data) {
 				            json = data;
@@ -470,7 +470,7 @@ var json3 = (function () {
 				    $.ajax({
 				        'async': false,
 				        'global': false,
-				        'url': 'fetch_sinoindex_json.php?year=' + selected_year + '&group_by_sector=TRUE',
+				        'url': 'fetch_sinoindex_json_2013.php?year=' + selected_year + '&group_by_sector=TRUE',
 				        'dataType': "json",
 				        'success': function (data) {
 				            json = data;
@@ -509,7 +509,7 @@ var json3 = (function () {
 			    $.ajax({
 			        'async': false,
 			        'global': false,
-			        'url': 'fetch_sinoindex_json.php?year=' + selected_year + '&cat=' + selected_cat,
+			        'url': 'fetch_sinoindex_json_2013.php?year=' + selected_year + '&cat=' + selected_cat,
 			        'dataType': "json",
 			        'success': function (data) {
 			            json = data;
@@ -533,7 +533,7 @@ var json3 = (function () {
 			    $.ajax({
 			        'async': false,
 			        'global': false,
-			        'url': 'fetch_sinoindex_json.php?year=' + selected_year,
+			        'url': 'fetch_sinoindex_json_2013.php?year=' + selected_year,
 			        'dataType': "json",
 			        'success': function (data) {
 			            json = data;
@@ -559,7 +559,7 @@ var json3 = (function () {
 			    $.ajax({
 			        'async': false,
 			        'global': false,
-			        'url': 'fetch_sinoindex_json.php?year=2012&cat=' + selected_cat,
+			        'url': 'fetch_sinoindex_json_2013.php?year=2012&cat=' + selected_cat,
 			        'dataType': "json",
 			        'success': function (data) {
 			            json = data;

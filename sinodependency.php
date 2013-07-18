@@ -37,7 +37,7 @@ h4 {
     text-decoration:none;
     font-weight:bold;
     color: #333;
-	line-height: 27px;
+	line-height: 27px;    
 }
 
 h5 {
@@ -55,8 +55,8 @@ a {
     position:relative;
 }
 
-#left-container,
-#right-container,
+#left-container, 
+#right-container, 
 #center-container {
 }
 
@@ -71,7 +71,7 @@ a {
 }
 
 #left-container {
-
+    
 }
 
 #right-container {
@@ -151,7 +151,7 @@ a {
   font-size:9px;
   overflow:hidden;
   cursor:pointer;
-/*
+/*  
   text-shadow:2px 2px 5px #000;
   -o-text-shadow:2px 2px 5px #000;
   -webkit-text-shadow:2px 2px 5px #000;
@@ -259,7 +259,7 @@ a {
 <!--[if IE]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
 
 <!-- JIT Library File -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>    
 <script language="javascript" type="text/javascript" src="jit_treemap.js"></script>
 
 <script language="javascript" type="text/javascript" src="sinodependency.js"></script>
@@ -274,15 +274,11 @@ a {
 <div id="type-list">
 	<table>
 	    <tr>
-          <td style="text-align: center; width: 25%;">
-              <input type="radio" id="2012" name="viz-year" checked="checked" value="left" />
-            <label for="2013">2012/13</label>
-          </td>
 	        <td style="text-align: center; width: 25%;">
 	            <input type="radio" id="2012" name="viz-year" checked="checked" value="left" />
 	        	<label for="2012">2011/12</label>
 	        </td>
-
+		
 	        <td style="text-align: center; width: 25%;">
 	            <input type="radio" id="2010" name="viz-year" value="left" />
 	        	<label for="2010">2010</label>
@@ -290,31 +286,31 @@ a {
 	        <td style="text-align: center; width: 25%;">
 	            <input type="radio" id="2009" name="viz-year" value="left" />
 	        	<label for="2009">2009</label>
-	        </td>
+	        </td>   
 	        <td style="text-align: center; width: 25%;">
 	            <input type="checkbox" id="group_by_sector" name="group_by_sector" value="left" />
 	        	<label for="group_by_sector">Group by sector</label>
-	        </td>
-	    </tr>
+	        </td>   
+	    </tr>	 	    
 	</table>
-
+	
 	<table style="width: 100%;" class="country-legend">
 		<tr>
 			<td><span style="width: 10px; height: 5px; background: rgb(143,188,143);">&nbsp;&nbsp;</span> <a href="#" id="cat_basic_materials">Basic Materials</a></td>
-			<td><span style="width: 10px; height: 5px; background: rgb(233,150,122);">&nbsp;&nbsp;</span> <a href="#" id="cat_communications">Communications</a></td>
-			<td><span style="width: 10px; height: 5px; background: rgb(70,130,180);">&nbsp;&nbsp;</span> <a href="#" id="cat_consumer_cyclical">Consumer, Cyclical</a></td>
+			<td><span style="width: 10px; height: 5px; background: rgb(233,150,122);">&nbsp;&nbsp;</span> <a href="#" id="cat_communications">Communications</a></td>	
+			<td><span style="width: 10px; height: 5px; background: rgb(70,130,180);">&nbsp;&nbsp;</span> <a href="#" id="cat_consumer_cyclical">Consumer, Cyclical</a></td>	
 			<td><span style="width: 10px; height: 5px; background: rgb(135,206,235);">&nbsp;&nbsp;</span> <a href="#" id="cat_consumer_noncyclical">Consumer, Non-Cyclical</a></td>
 			<td><span style="width: 10px; height: 5px; background: rgb(46,139,87);">&nbsp;&nbsp;</span> <a href="#" id="cat_energy">Energy</a></td>
 		</tr>
 		<tr>
 			<td><span style="width: 10px; height: 5px; background: rgb(222,184,135);">&nbsp;&nbsp;</span> <a href="#" id="cat_financial">Financial</a></td>
 			<td><span style="width: 10px; height: 5px; background: rgb(240,128,128);">&nbsp;&nbsp;</span> <a href="#" id="cat_industrial">Industrial</a></td>
-			<td><span style="width: 10px; height: 5px; background: rgb(189,183,107);">&nbsp;&nbsp;</span> <a href="#" id="cat_technology">Technology</a></td>
-			<td><span style="width: 10px; height: 5px; background: rgb(0,139,139);">&nbsp;&nbsp;</span> <a href="#" id="cat_utilities">Utilities</a></td>
+			<td><span style="width: 10px; height: 5px; background: rgb(189,183,107);">&nbsp;&nbsp;</span> <a href="#" id="cat_technology">Technology</a></td>			
+			<td><span style="width: 10px; height: 5px; background: rgb(0,139,139);">&nbsp;&nbsp;</span> <a href="#" id="cat_utilities">Utilities</a></td>			
 <!--			<td><span style="width: 10px; height: 5px; background: #FFD8FD;">&nbsp;&nbsp;</span> Other</td>-->
-			<td></td>
+			<td></td>	
 		</tr>
-	</table>
+	</table>	
 </div>
 
 
@@ -348,7 +344,7 @@ a {
 </div>
 
 <div id="center-container">
-    <div id="infovis"></div>
+    <div id="infovis"></div>    
 </div>
 
 <div id="right-container">
